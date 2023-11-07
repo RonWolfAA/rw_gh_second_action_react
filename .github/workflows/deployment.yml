@@ -6,10 +6,11 @@ jobs:
         steps:
         - name: Get Code
           uses: actions/checkout@v3
+        #  current linux latest is 22.04 and already has node 18
         # - name: Install nodeJS
         #   uses: actions/setup-node@v3
         #   with:
-        #     node-version: 21
+        #     node-version: 18
         - name: Install dependencies
           run: npm ci
         - name: Run tests
@@ -20,6 +21,11 @@ jobs:
       steps:
         - name: Get code
           uses: actions/checkout@v3
+        #  current linux latest is 22.04 and already has node 18
+        # - name: Install nodeJS
+        #   uses: actions/setup-node@v3
+        #   with:
+        #     node-version: 18
         - name: Install dependencies
           run: npm ci
         - name: Build project
